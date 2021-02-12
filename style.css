@@ -40,4 +40,139 @@ body {
     color: var(--dark-cyan);
     font-family: var(--font-family);
     font-weight: var(--font-normal);
+
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
+#card {
+    /* background-color: white; */
+
+    width: 900px;
+    height: 500px;
+
+    border-radius: 25px;
+    box-shadow: 1px 1px 12px #555; /* FIXME */
+
+    background-color: white;
+}
+
+#card:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#svg-box {
+    position: absolute;
+    transform: translate(-560px,200px);
+    z-index: 2;
+}
+
+@media screen and (max-width: 1440px) {
+    #card {
+        background-color: green;
+    }
+}
+/* https://developer.mozilla.org/fr/docs/Web/CSS/@media */
+/* ------- */
+
+
+#left {
+    width: 50%;
+    height: 100%;
+    float: left;
+
+    background-image: url("images/bg-pattern-desktop.svg") no-repeat;
+    overflow: hidden;
+}
+
+
+#svg-woman {
+    /* transform: scale(0.5);  */
+    /* position: absolute; */
+    transform: translate(-80px, 50px);
+    /* z-index: -100; */
+    z-index: 1;
+    position: relative;
+}
+
+#svg-pattern {
+    transform: translate(-580px,-680px);
+    /* z-index: -100; */
+    /* background-color: red; */
+    /* overflow:hidden; */
+    /* z-index: 10; */
+    z-index: 0;
+    position: relative;
+}
+
+
+/* ------- */
+
+#right {
+    width: 50%;
+    height: 100%;
+    float : right;
+
+    text-align: left;
+    box-sizing: border-box;
+    padding : 20px;
+}
+
+details {
+    border-bottom: solid var(--light-grayish-blue) 1px;
+}
+
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+summary {
+    color: #333;
+    padding: 1rem;
+
+    outline: none;
+    border-radius: 0.25rem;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+
+    padding-left: 0;
+    transition: color 0.2s linear;
+}
+
+summary:hover {
+    color: var(--soft-red);
+    transition: color 0.2s linear;
+}
+
+details > summary::after {
+    position: absolute;
+    content: url("images/icon-arrow-down.svg");
+    right: 20px;
+    transition: all 0.5s;
+}
+details[open] > summary::after {
+    position: absolute;
+    content: url("images/icon-arrow-down.svg");
+    transform: rotate(-180deg);
+    transition: all 0.5s;
+    right: 20px;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary {
+    font-weight: bold;
+ }
