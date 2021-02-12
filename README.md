@@ -26,10 +26,11 @@ Your users should be able to:
 
 ### HTML
 This is the first time I use the `details` and `summary` tag, what a great discovery!  
-I use `div` to create section in my code, but I must take a deep look into most used tag such as `aside` or `article` to improve my code and my understanding.
+I use `div` to create section in my code, but I must take a deep look into most used tags such as `aside` or `article` to improve my code and my understanding.
 
 ### CSS
-This is also my first time I use `media query`. I did my best but I'm not confident with the way i manage images change, they must be a better solution. 
+This is also my first time I use `media query`. I did my best but I'm not confident with the way I manage images change, they must be a better solution.  
+I had a hard time managing image. I do know how to do it properly.
 
-### JS  :javascript:
+### JS 
 Nothing special.

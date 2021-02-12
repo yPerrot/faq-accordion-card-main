@@ -52,8 +52,6 @@ body {
 }
 
 #card {
-    /* background-color: white; */
-
     width: 900px;
     height: 500px;
 
@@ -65,12 +63,12 @@ body {
 
 #svg-box {
     position: absolute;
-    transform: translate(-560px,200px);
+    transform: translate(-545px,180px);
     z-index: 2;
+    filter: drop-shadow(0 5px 5px var(--very-dark-grayish-blue));
 }
 
 /* ------- */
-
 
 #left {
     width: 50%;
@@ -85,17 +83,13 @@ body {
     z-index: 1;
 }
 
-#svg-woman-mobile { 
-    display: none;
-}
-
 #svg-pattern {
     transform: translate(-580px,-680px);
     position: relative;
     z-index: 0;
 }
 
-#svg-pattern-mobile { 
+#svg-woman-mobile, #svg-pattern-mobile { 
     display: none;
 }
 
@@ -162,20 +156,20 @@ details[open] summary {
     font-weight: bold;
 }
 
+/* ------- */
+
 @media screen and (max-width: 1440px) {
     #card {
-        /* background-color: green; */
         width: 400px;
-        height: 540px;
+        height: 550px;
         display: block;
     }
 
     #svg-box, #svg-pattern, #svg-woman {
-        visibility: hidden;
+        display: none;
     }
 
     #left {
-        /* background-color: red; */
         width: 100%;
         height: 15%;
         overflow: visible;
@@ -183,17 +177,14 @@ details[open] summary {
 
     #svg-woman-mobile {
         display: inline;
-        /* background-color: yellow; */
-        transform: translate(-140px, -1425px);
+        transform: translate(-140px, -105px);
         position:absolute;
         z-index: 1;
-        /* background-color: red; */
     }
 
     #svg-pattern-mobile {
         display: inline;
-        /* background-color: yellow; */
-        transform: translate(-110px, -1325px);
+        transform: translate(-110px, 0px);
         position:absolute;
         z-index: 0;
     }
@@ -201,10 +192,10 @@ details[open] summary {
     
     #right {
         width: 100%;
-        /* background-color: red; */
+        height: 85%;
     }
 
-    h2 {
+    h1 {
         text-align: center;
     }
 
