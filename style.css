@@ -63,24 +63,12 @@ body {
     background-color: white;
 }
 
-#card:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 #svg-box {
     position: absolute;
     transform: translate(-560px,200px);
     z-index: 2;
 }
 
-@media screen and (max-width: 1440px) {
-    #card {
-        background-color: green;
-    }
-}
-/* https://developer.mozilla.org/fr/docs/Web/CSS/@media */
 /* ------- */
 
 
@@ -88,31 +76,28 @@ body {
     width: 50%;
     height: 100%;
     float: left;
-
-    background-image: url("images/bg-pattern-desktop.svg") no-repeat;
     overflow: hidden;
 }
 
-
 #svg-woman {
-    /* transform: scale(0.5);  */
-    /* position: absolute; */
     transform: translate(-80px, 50px);
-    /* z-index: -100; */
-    z-index: 1;
     position: relative;
+    z-index: 1;
+}
+
+#svg-woman-mobile { 
+    display: none;
 }
 
 #svg-pattern {
     transform: translate(-580px,-680px);
-    /* z-index: -100; */
-    /* background-color: red; */
-    /* overflow:hidden; */
-    /* z-index: 10; */
-    z-index: 0;
     position: relative;
+    z-index: 0;
 }
 
+#svg-pattern-mobile { 
+    display: none;
+}
 
 /* ------- */
 
@@ -175,4 +160,52 @@ details > summary::-webkit-details-marker {
 
 details[open] summary {
     font-weight: bold;
- }
+}
+
+@media screen and (max-width: 1440px) {
+    #card {
+        /* background-color: green; */
+        width: 400px;
+        height: 540px;
+        display: block;
+    }
+
+    #svg-box, #svg-pattern, #svg-woman {
+        visibility: hidden;
+    }
+
+    #left {
+        /* background-color: red; */
+        width: 100%;
+        height: 15%;
+        overflow: visible;
+    }
+
+    #svg-woman-mobile {
+        display: inline;
+        /* background-color: yellow; */
+        transform: translate(-140px, -1425px);
+        position:absolute;
+        z-index: 1;
+        /* background-color: red; */
+    }
+
+    #svg-pattern-mobile {
+        display: inline;
+        /* background-color: yellow; */
+        transform: translate(-110px, -1325px);
+        position:absolute;
+        z-index: 0;
+    }
+
+    
+    #right {
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+}
